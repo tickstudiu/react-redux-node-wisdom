@@ -45,7 +45,7 @@ export default class Example extends React.Component {
                                 <NavLink href="" active={path === "/herbs" ? true : false} onClick={herbsRoute}>Herbs</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="" active={path === "/about" ? true : false} onClick={aboutUsRoute}>About Us</NavLink>
+                                <NavLink href="" active={path === "/aboutUs" ? true : false} onClick={aboutUsRoute}>About Us</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="#" onClick={ () => handleChangeLang('th') } className={`${lang === "th" ? "disabled" : "text-primary"}`}>TH</NavLink>

@@ -21,7 +21,7 @@ export const Public = ComposedComponent => {
         };
 
         homeRoute = () => {
-            this.props.history.push("/");
+            this.props.history.push("/home");
         };
 
         herbsRoute = () => {
