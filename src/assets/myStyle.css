@@ -1,0 +1,63 @@
+.header-list{
+    color: #ccc!important
+}
+
+.text-comment{
+    font-size: 18px;
+    line-height: 2;
+}
+
+.text-comment:before{
+    content: '“ ';
+}
+
+.text-comment:after{
+    content: ' ”';
+}
+
+.jumbotron-header{
+    background: url("http://s1.1zoom.me/b5050/259/Bouquets_Tulips_Eustoma_Gray_background_545684_3840x2400.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -4rem;
+}
+
+.jumbotron-header-body{
+    font-size: 18px;
+    line-height: 2;
+    max-width: 600px;
+}
+
+.herb-text{
+    font-size: 18px;
+    line-height: 2;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.hover-shadow{
+    transition: box-shadow 0.25s;
+}
+
+.hover-shadow:hover{
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.hover-shadow.active{
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.text-overflow{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.2em;
+    max-height: 2.4em;
+}

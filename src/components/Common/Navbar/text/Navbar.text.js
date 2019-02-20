@@ -1,0 +1,8 @@
+export const NavbarText = {
+    th: {
+        helloW: 'หวัดดีชาวโลก',
+    },
+    en: {
+        helloW: 'Hello world',
+    }
+};
