@@ -48,7 +48,11 @@ class herbs extends Component {
                                 this.props.herbStore.allHerb.slice(tools.limitUpperPage(this.props.match.params.page), tools.limitLowerPage(this.props.match.params.page)).map((data, index) => {
                                     return (
                                         <Col lg={3} md={4} sm={12} key={index}>
-                                            <CardHerb title={data.title} body={data.description} image={data.path} herbRouteById={herbRouteById} id={data.herbID}/>
+                                            <CardHerb title={data.title}
+                                                      body={data.description}
+                                                      image={data.path}
+                                                      herbRouteById={herbRouteById}
+                                                      id={data.herbID}/>
                                         </Col>
                                     )
                                 })

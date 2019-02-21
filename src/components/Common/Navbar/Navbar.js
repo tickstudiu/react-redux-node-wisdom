@@ -32,7 +32,7 @@ export default class Example extends React.Component {
         const {path, homeRoute, herbsRoute, aboutUsRoute, handleChangeLang, lang} = this.props;
         const staticText = tools.checkLanguage(NavbarText);
         return (
-            <Navbar light expand="md" className="px-0">
+            <Navbar light expand="md">
                 <Container>
                     <NavbarBrand href="/" className="text-capitalize">herb site</NavbarBrand>
                     <NavbarToggler onClick={this.toggle}/>
