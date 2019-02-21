@@ -37,7 +37,7 @@ export default class JumbotronWithImage extends React.Component {
                                 </section>
                             </div>
                         </Col>
-                        <Col lg={8} md={8} sm={12} className="d-none d-md-block">
+                        <Col lg={8} md={8} sm={12}>
                             <img src={image ? `${RootUrl}/${image}`: emptyImage} alt={alt} className="img-fluid cursor-pointer" onClick={() => herbRouteById(id)} />
                         </Col>
                     </Row>
@@ -48,7 +48,7 @@ export default class JumbotronWithImage extends React.Component {
         return (
             <Jumbotron className="bg-transparent">
                 <Row>
-                    <Col lg={8} md={8} sm={12} className="d-none d-md-block">
+                    <Col lg={8} md={8} sm={12}>
                         <img src={image ? `${RootUrl}/${image}`: emptyImage} alt={alt} className="img-fluid cursor-pointer" onClick={() => herbRouteById(id)} />
                     </Col>
                     <Col lg={4} md={4} sm={12} className="text-center">
