@@ -10,6 +10,8 @@ import {
     DELETE_HERB_ERROR
 } from '../types';
 
+import * as tools from '../../utils/';
+
 const initalState = {
     lastHerbID: 0,
     allHerb: [],
@@ -29,10 +31,16 @@ export default (state = initalState,action) => {
                 herb: action.payload
             };
         case CREATE_HERB:
+            tools.successNotify('created!!');
             return {
                 ...state,
                 lastHerbID: action.lastHerbID,
                 allHerb: action.payload,
+            };
+        case CREATE_HERB_ERROR:
+            tools.warningNotify (action.payload);
+            return {
+                ...state,
             };
         default:
             return state;
