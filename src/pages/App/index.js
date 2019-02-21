@@ -50,7 +50,7 @@ class App extends Component {
                                                            title={data.title}
                                                            description={data.description}
                                                            image={data.path}
-                                                           alt
+                                                           alt={data.title}
                                                            herbRouteById={herbRouteById}
                                                            id={data.herbID}
                                                            right/>
