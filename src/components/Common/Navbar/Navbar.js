@@ -39,13 +39,13 @@ export default class Example extends React.Component {
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink href="" className={path === "/home" ? 'active' : ''} onClick={homeRoute}>Home</NavLink>
+                                <NavLink href="" className={path === "/home" ? 'active' : ''} onClick={homeRoute}>{staticText.home}</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="" className={path === "/herbs" ? 'active' : ''} onClick={herbsRoute}>Herbs</NavLink>
+                                <NavLink href="" className={path === "/herbs" ? 'active' : ''} onClick={herbsRoute}>{staticText.herb}</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="" className={path === "/aboutUs" ? 'active' : ''} onClick={aboutUsRoute}>About Us</NavLink>
+                                <NavLink href="" className={path === "/aboutUs" ? 'active' : ''} onClick={aboutUsRoute}>{staticText.aboutUs}</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="#" onClick={ () => handleChangeLang('th') } className={`${lang === "th" ? "disabled" : "text-primary"}`}>TH</NavLink>
