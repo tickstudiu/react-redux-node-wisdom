@@ -11,6 +11,7 @@ import {
 } from '../types';
 
 const initalState = {
+    lastHerbID: 0,
     allHerb: [],
     herb: {},
 };
@@ -20,7 +21,7 @@ export default (state = initalState,action) => {
         case FETCH_HERB:
             return {
                 ...state,
-                allHerb: action.payload,
+                allHerb: action.payload.reverse(),
             };
         case FETCH_HERB_BY_ID:
             return {
@@ -30,6 +31,7 @@ export default (state = initalState,action) => {
         case CREATE_HERB:
             return {
                 ...state,
+                lastHerbID: action.lastHerbID,
                 allHerb: action.payload,
             };
         default:

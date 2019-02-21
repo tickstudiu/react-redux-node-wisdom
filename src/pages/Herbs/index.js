@@ -13,10 +13,13 @@ class herbs extends Component {
         search: ''
     };
 
-    handleChange = (e) => {
+    handleChange = (event) => {
+        let name = event.target.name,
+            value = event.target.value;
+
         this.setState({
-            [e.target.name]: e.target.value,
-        })
+            [name]: value
+        });
     };
 
     herbRouteById = (id) => {
@@ -45,17 +48,32 @@ class herbs extends Component {
                     <Row>
                         {
                             this.props.herbStore.allHerb.length > 0 ?
-                                this.props.herbStore.allHerb.slice(tools.limitUpperPage(this.props.match.params.page), tools.limitLowerPage(this.props.match.params.page)).map((data, index) => {
-                                    return (
-                                        <Col lg={3} md={4} sm={12} key={index}>
-                                            <CardHerb title={data.title}
-                                                      body={data.description}
-                                                      image={data.path}
-                                                      herbRouteById={herbRouteById}
-                                                      id={data.herbID}/>
-                                        </Col>
-                                    )
-                                })
+                                this.state.search ?
+                                    this.props.herbStore.allHerb.map((data, index) => {
+                                        if (data.title.match(this.state.search)){
+                                            return (
+                                                <Col lg={3} md={4} sm={12} key={index}>
+                                                    <CardHerb title={data.title}
+                                                              body={data.description}
+                                                              image={data.path}
+                                                              herbRouteById={herbRouteById}
+                                                              id={data.herbID}/>
+                                                </Col>
+                                            )
+                                        }
+                                    })
+                                    :
+                                    this.props.herbStore.allHerb.slice(tools.limitUpperPage(this.props.match.params.page), tools.limitLowerPage(this.props.match.params.page)).map((data, index) => {
+                                        return (
+                                            <Col lg={3} md={4} sm={12} key={index}>
+                                                <CardHerb title={data.title}
+                                                          body={data.description}
+                                                          image={data.path}
+                                                          herbRouteById={herbRouteById}
+                                                          id={data.herbID}/>
+                                            </Col>
+                                        )
+                                    })
                                 :
                                 <p>
                                     {staticText.noData}

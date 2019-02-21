@@ -6,7 +6,8 @@ export const CreateText = {
         placeholderDescription: 'คำอธิบายของสมุนไพร',
         benefit: 'สรรพคุณ',
         placeholderBenefit: 'คำอธิบายของคุณสมบัติ หรือ ประโยชน์',
-        btn: 'สร้าง'
+        btn: 'สร้าง',
+        createLoading: 'กำลังสร้าง...',
     },
     en: {
         title: 'Title',
@@ -15,6 +16,7 @@ export const CreateText = {
         placeholderDescription: 'Description of herbs',
         benefit: 'Properties',
         placeholderBenefit: 'Description of properties or benefits',
-        btn: 'Create'
+        btn: 'Create',
+        createLoading: 'loading...',
     }
 };

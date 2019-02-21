@@ -10,7 +10,7 @@ import {
     UPDATE_IMAGE_BY_ID_ERROR,
 } from '../types';
 import { RootUrl } from '../../config';
-import * as tools from "../../utils/crudUtils";
+import * as tools from "../../utils";
 
 export const getImages = (callback) => async dispatch => {
     const res = await tools.getApi(`${RootUrl}/image`);

@@ -52,7 +52,7 @@ export const postHerb = (callback, data) => async dispatch => {
         await dispatch({
             type: CREATE_HERB,
             payload: res.data.result,
-            lastTripID: res.data.result.tripID
+            lastHerbID: res.data.result.herbID
         });
         await callback();
     } else {

@@ -9,6 +9,7 @@ import {Loader, FormHeaderHerb, JumbotronDescriptionCreate} from '../../componen
 class create extends Component {
 
     state = {
+        createLoading: false,
         loading: true,
         search: '',
         image: null,
@@ -32,14 +33,30 @@ class create extends Component {
         reader.readAsDataURL(file);
     };
 
-    handleChange = (e) => {
+    handleChange = (event) => {
+        let name = event.target.name,
+            value = event.target.value;
+
         this.setState({
-            [e.target.name]: e.target.value,
-        })
+            [name]: value
+        });
     };
 
     handleSubmit = () => {
-
+        this.setState({createLoading: true});
+        let data = {
+            title: this.state.title,
+            description: this.state.description,
+            benefit: this.state.benefit,
+        };
+        this.props.postHerb(async () => {
+            const formData = new FormData();
+            formData.append('herbImage', this.state.image);
+            formData.append('herbID', this.props.herbStore.lastHerbID);
+            this.props.postImage(async () => {
+                await this.setState({createLoading: false});
+            }, formData)
+        }, data)
     };
 
     componentDidMount(){
@@ -69,12 +86,12 @@ class create extends Component {
                             <h5 className="text-capitalize">{staticText.title}</h5>
                             <Input type="text" name="title" placeholder={staticText.placeholderTitle} onChange={handleChange}/>
                             <h5 className="text-capitalize">{staticText.description}</h5>
-                            <Input type="text" name="description" placeholder={staticText.placeholderDescription} onChange={handleChange}/>
+                            <Input type="textarea" name="description" placeholder={staticText.placeholderDescription} onChange={handleChange}/>
                             <h5 className="text-capitalize">{staticText.benefit}</h5>
-                            <Input type="text" name="benefit" placeholder={staticText.placeholderBenefit} onChange={handleChange}/>
+                            <Input type="textarea" name="benefit" placeholder={staticText.placeholderBenefit} onChange={handleChange}/>
                             <hr/>
                             <span className="d-flex justify-content-end">
-                                <Button color="primary" outline onClick={handleSubmit}>{staticText.btn}</Button>
+                                <Button color="primary" outline onClick={handleSubmit}>{this.state.createLoading ? staticText.createLoading:staticText.btn}</Button>
                             </span>
                         </Col>
                     </Row>
@@ -85,9 +102,9 @@ class create extends Component {
     }
 }
 
-const mapStateToProps = ({lang}) => {
+const mapStateToProps = ({lang, herbStore}) => {
     return {
-        lang
+        lang, herbStore
     }
 };
 

@@ -5,19 +5,32 @@ import * as action from '../../redux/actions';
 import {HerbText} from './herb.text';
 import {Container} from 'reactstrap';
 import {Loader, CardHeaderHerb} from '../../components';
+import {RootUrl} from "../../config";
+import emptyImage from "../../assets/image/image600x400.png";
 
 class herb extends Component {
 
     state = {
         loading: true,
-        search: ''
+        search: '',
+        path: null
     };
 
     componentWillMount() {
         this.props.getHerbById(async () => {
-            await console.log(this.props.herbStore.herb);
-            this.setState({loading: false});
         }, this.props.match.params.id);
+
+        this.props.getImages(async () => {
+            await this.props.imageStore.images.map(img => {
+                if (img.herbID === this.props.herbStore.herb.herbID){
+                    this.setState({
+                        path: img.path
+                    })
+                }
+            });
+
+            await this.setState({loading: false});
+        });
     }
 
     render() {
@@ -30,7 +43,7 @@ class herb extends Component {
         return (
             <div>
                 <Container>
-                    <CardHeaderHerb image="https://images.unsplash.com/photo-1528796940112-4979b4a98424?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" title={this.props.herbStore.herb.title}/>
+                    <CardHeaderHerb image={this.state.path ? `${RootUrl}/${this.state.path}`: emptyImage} title={this.props.herbStore.herb.title}/>
                     <p className="text-capitalize mt-2 herb-text">
                         {
                             this.props.herbStore.herb.description ?
@@ -55,9 +68,9 @@ class herb extends Component {
     }
 }
 
-const mapStateToProps = ({lang, herbStore}) => {
+const mapStateToProps = ({lang, herbStore, imageStore}) => {
     return {
-        lang, herbStore
+        lang, herbStore, imageStore
     }
 };
 
