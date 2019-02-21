@@ -18,7 +18,7 @@ export default class FormSearch extends React.Component {
                     <Input type="text" name="search"  placeholder={staticText.placeholder} onChange={handleChange}/>
                 </Col>
                 <Col lg={2} md={2}>
-                    <Button color="primary" block outline><FontAwesomeIcon icon="search"/></Button>
+                    <Button className="d-none d-sm-block" color="primary" block outline><FontAwesomeIcon icon="search"/></Button>
                 </Col>
             </Row>
         );
