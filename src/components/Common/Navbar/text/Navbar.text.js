@@ -1,8 +1,12 @@
 export const NavbarText = {
     th: {
-        helloW: 'หวัดดีชาวโลก',
+        home: 'หน้าหลัก',
+        herb: 'สมุนไพร',
+        aboutUs: 'เกี่ยวกับพวกเรา',
     },
     en: {
-        helloW: 'Hello world',
+        home: 'Home',
+        herb: 'Herb',
+        aboutUs: 'About Us',
     }
 };
