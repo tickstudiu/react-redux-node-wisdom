@@ -7,7 +7,7 @@ export default class JumbotronHeader extends React.Component {
     render() {
         const staticText = tools.checkLanguage(JumbotronHeaderText);
         return (
-            <div className="jumbotron-header">
+            <div className="jumbotron-header d-none d-md-block">
                 <Container>
                     <Jumbotron className="py-5 bg-transparent">
                         <h1 className="display-3 font-weight-bold">{staticText.title}</h1>
