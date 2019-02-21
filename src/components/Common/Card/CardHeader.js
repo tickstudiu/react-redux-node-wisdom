@@ -8,7 +8,7 @@ export default class CardHeader extends React.Component {
     render() {
         const staticText = tools.checkLanguage(CardHerbText);
         return (
-            <Card inverse className="border-0 rounded-0">
+            <Card inverse className="border-0 rounded-0 d-none d-md-block">
                 <CardImg width="100%"
                          src={CardHeaderImg}
                          alt="Card header image" className="rounded-0" style={{filter: 'brightness(70%)'}}/>
