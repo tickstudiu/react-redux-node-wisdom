@@ -3,6 +3,7 @@ import Herbs from '../pages/Herbs';
 import Herb from '../pages/Herb'
 import AboutUs from '../pages/AboutUs';
 import NotPage from '../pages/404';
+import Create from '../pages/Create';
 
 import {Public} from '../HOC';
 
@@ -36,6 +37,11 @@ const indexRoutes = [
         name: 'herb',
         path: '/herb/:id',
         component: Public(Herb),
+    },
+    {
+        name: 'herb',
+        path: '/create',
+        component: Public(Create),
     },
     {
         name: '404',
