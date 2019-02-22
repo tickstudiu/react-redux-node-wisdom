@@ -3,7 +3,8 @@ import {connect} from "react-redux";
 
 import 'react-toastify/dist/ReactToastify.css';
 import {ToastContainer} from 'react-toastify';
-
+import '../assets/myStyle.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import * as tools from "../utils";
 import * as actions from "../redux/actions";
 import {Footer, Navbar} from "../components";
