@@ -83,11 +83,11 @@ class create extends Component {
                                             imagePreviewUrl={imagePreviewUrl}/>
                         </Col>
                         <Col lg={6} md={12}>
-                            <h5 className="text-capitalize">{staticText.title}</h5>
+                            <h5 className="text-capitalize">{staticText.title}<span className="text-danger">*</span></h5>
                             <Input type="text" name="title" placeholder={staticText.placeholderTitle} onChange={handleChange}/>
-                            <h5 className="text-capitalize">{staticText.description}</h5>
+                            <h5 className="text-capitalize">{staticText.description}<span className="text-danger">*</span></h5>
                             <Input type="textarea" name="description" placeholder={staticText.placeholderDescription} onChange={handleChange}/>
-                            <h5 className="text-capitalize">{staticText.benefit}</h5>
+                            <h5 className="text-capitalize">{staticText.benefit}<span className="text-danger">*</span></h5>
                             <Input type="textarea" name="benefit" placeholder={staticText.placeholderBenefit} onChange={handleChange}/>
                             <hr/>
                             <span className="d-flex justify-content-end">
