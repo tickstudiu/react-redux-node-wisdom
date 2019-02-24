@@ -10,9 +10,9 @@ export const FooterText = {
         query: 'สอบถาม',
         articles: 'บทความเกี่ยวกับสมุนไพร',
         aboutUs: 'เกี่ยวกับเรา',
-        contact: 'ติดต่อเรา โทร: 0123-456789',
+        contact: 'ติดต่อเรา โทร:',
         question: 'คำถามที่พบบ่อย',
-        address: 'ที่อยู่ ',
+        address: 'ที่อยู่',
     },
     en: {
         about: 'Local herbs',
@@ -25,7 +25,7 @@ export const FooterText = {
         query: 'query',
         articles: 'Herbal articles',
         aboutUs: 'About us',
-        contact: 'Contact Us Call: 0123-456789',
+        contact: 'Contact Us',
         question: 'frequently asked Questions',
         address: 'address',
     }
