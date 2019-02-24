@@ -42,7 +42,7 @@ export const Public = ComposedComponent => {
                             homeRoute={homeRoute} herbsRoute={herbsRoute} aboutUsRoute={aboutUsRoute}/>
                     <ComposedComponent {...this.props} />
                     <ToastContainer/>
-                    <Footer/>
+                    <Footer herbsRoute={herbsRoute} aboutUsRoute={aboutUsRoute}/>
                 </Fragment>
             );
         }
