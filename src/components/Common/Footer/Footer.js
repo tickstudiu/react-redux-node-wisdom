@@ -46,8 +46,8 @@ export default class Footer extends React.Component {
                     </Row>
                     <Row>
                         <Col>
-                            <p className="text-capitalize">Copyright ©2019 All rights reserved | This template is made with  by <a
-                                href="#">Colorlib</a></p>
+                            <p className="text-capitalize">Copyright ©2019 All rights reserved | This template is made with  by
+                                <span className="text-primary"> Colorlib</span></p>
                         </Col>
                     </Row>
                 </Container>

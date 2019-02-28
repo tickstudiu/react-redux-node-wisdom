@@ -81,7 +81,7 @@ export default class FormLogin extends React.Component {
                 </Form>
 
                 <footer className="mt-4">
-                    <p className="text-center"><a href="" onClick={handleRouteToRegister}>{create}</a></p>
+                    <p className="text-center"><span onClick={handleRouteToRegister}>{create}</span></p>
                 </footer>
             </div>
         );

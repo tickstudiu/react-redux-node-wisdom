@@ -1,6 +1,6 @@
 export { default as Loader } from './Loader';
-export { default as BtnLang } from './Common/Btn/BtnLang';
-export { default as NavbarLang } from './Common/Navbar/NavbarLang';
+// export { default as BtnLang } from './Common/Btn/BtnLang';
+// export { default as NavbarLang } from './Common/Navbar/NavbarLang';
 export { default as CardColum } from './Common/Card/CardColum';
 export { default as CardHeader } from './Common/Card/CardHeader';
 export { default as CardHerb } from './Common/Card/CardHerb';
@@ -14,5 +14,6 @@ export { default as JumbotronHeader } from './Common/Jumbotron/JumbotronHeader';
 export { default as JumbotronTwoSection } from './Common/Jumbotron/JumbotronTwoSection';
 export { default as JumbotronWithImage } from './Common/Jumbotron/JumbotronWithImage';
 export { default as JumbotronDescriptionCreate } from './Common/Jumbotron/JumbotronDescriptionCreate';
-export { default as FooterTextOnly } from './Common/Footer/FooterTextOnly';
+// export { default as FooterTextOnly } from './Common/Footer/FooterTextOnly';
+export { default as Pagination } from './Common/Pagination/index';
 export { default as Footer } from './Common/Footer/Footer';

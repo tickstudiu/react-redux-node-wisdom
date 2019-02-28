@@ -25,7 +25,7 @@ const indexRoutes = [
     },
     {
         name: 'herbs',
-        path: '/herbs/page/:id',
+        path: '/herbs/page/:page',
         component: Public(Herbs),
     },
     {

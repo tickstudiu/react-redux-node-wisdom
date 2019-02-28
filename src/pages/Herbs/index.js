@@ -4,7 +4,7 @@ import * as tools from '../../utils';
 import * as action from '../../redux/actions';
 import {HerbsText} from './herbs.text';
 import {Container, Row, Col} from 'reactstrap';
-import {CardHeader, FormSearch, CardHerb, Loader} from '../../components';
+import {CardHeader, FormSearch, CardHerb, Loader, Pagination} from '../../components';
 
 class herbs extends Component {
 
@@ -26,6 +26,10 @@ class herbs extends Component {
         this.props.history.push(`/herb/${id}`);
     };
 
+    herbsPageRoute = (page) => {
+        this.props.history.push(`/herbs/page/${page}`);
+    };
+
     componentWillMount() {
         this.props.getHerbs(async () => {
             this.setState({loading: false});
@@ -33,7 +37,7 @@ class herbs extends Component {
     }
 
     render() {
-        const {handleChange, herbRouteById} = this;
+        const {handleChange, herbRouteById, herbsPageRoute} = this;
         const staticText = tools.checkLanguage(HerbsText);
 
         if(this.state.loading){
@@ -80,6 +84,9 @@ class herbs extends Component {
                                 </p>
                         }
                     </Row>
+                    <section className="d-flex justify-content-center">
+                        <Pagination number={this.props.herbStore.numberOfHerb} herbsPageRoute={herbsPageRoute} current={this.props.match.params.page}/>
+                    </section>
                 </Container>
             </div>
         );
