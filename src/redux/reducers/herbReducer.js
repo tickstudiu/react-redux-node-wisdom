@@ -11,7 +11,7 @@ const initialState = {
     lastHerbID: 0,
     allHerb: [],
     herb: {},
-    numberOfHerb: 0,
+    number: 0,
 };
 
 export default (state = initialState,action) => {
@@ -20,7 +20,7 @@ export default (state = initialState,action) => {
             return {
                 ...state,
                 allHerb: action.payload.reverse(),
-                numberOfHerb: action.payload.length,
+                number: action.payload.length,
             };
         case FETCH_HERB_BY_ID:
             return {

@@ -85,7 +85,7 @@ class herbs extends Component {
                         }
                     </Row>
                     <section className="d-flex justify-content-center">
-                        <Pagination number={this.props.herbStore.numberOfHerb} herbsPageRoute={herbsPageRoute} current={this.props.match.params.page}/>
+                        <Pagination number={this.props.herbStore.number} herbsPageRoute={herbsPageRoute} current={this.props.match.params.page}/>
                     </section>
                 </Container>
             </div>

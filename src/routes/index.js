@@ -1,7 +1,7 @@
 import App from '../pages/App';
 import Herbs from '../pages/Herbs';
-import Herb from '../pages/Herb'
-
+import Herb from '../pages/Herb';
+import Drugs from '../pages/Drugs';
 import AboutUs from '../pages/AboutUs';
 
 import NotPage from '../pages/404';
@@ -41,12 +41,12 @@ const indexRoutes = [
     {
         name: 'drugs',
         path: '/drugs',
-        component: Public(Herbs),
+        component: Public(Drugs),
     },
     {
         name: 'drugs',
         path: '/drugs/page/:page',
-        component: Public(Herbs),
+        component: Public(Drugs),
     },
     {
         name: 'drug',

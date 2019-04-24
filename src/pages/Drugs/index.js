@@ -26,18 +26,18 @@ class drugs extends Component {
         this.props.history.push(`/herb/${id}`);
     };
 
-    herbsPageRoute = (page) => {
-        this.props.history.push(`/herbs/page/${page}`);
+    drugsPageRoute = (page) => {
+        this.props.history.push(`/drugs/page/${page}`);
     };
 
     componentWillMount() {
-        this.props.getHerbs(async () => {
+        this.props.getDrugs(async () => {
             this.setState({loading: false});
         });
     }
 
     render() {
-        const {handleChange, herbRouteById, herbsPageRoute} = this;
+        const {handleChange, herbRouteById, drugsPageRoute} = this;
         const staticText = tools.checkLanguage(DrugsText);
 
         if(this.state.loading){
@@ -51,29 +51,29 @@ class drugs extends Component {
                     <FormSearch handleChange={handleChange}/>
                     <Row>
                         {
-                            this.props.herbStore.allHerb.length > 0 ?
+                            this.props.drugStore.allDrug.length > 0 ?
                                 this.state.search ?
-                                    this.props.herbStore.allHerb.map((data, index) => {
+                                    this.props.drugStore.allDrug.map((data, index) => {
                                         if (data.title.match(this.state.search)){
                                             return (
                                                 <Col lg={3} md={4} sm={12} key={index}>
                                                     <CardHerb title={data.title}
                                                               body={data.description}
                                                               image={data.path}
-                                                              herbRouteById={herbRouteById}
+                                                              herbRouteById
                                                               id={data.herbID}/>
                                                 </Col>
                                             )
                                         }
                                     })
                                     :
-                                    this.props.herbStore.allHerb.slice(tools.limitUpperPage(this.props.match.params.page), tools.limitLowerPage(this.props.match.params.page)).map((data, index) => {
+                                    this.props.drugStore.allDrug.slice(tools.limitUpperPage(this.props.match.params.page), tools.limitLowerPage(this.props.match.params.page)).map((data, index) => {
                                         return (
                                             <Col lg={3} md={4} sm={12} key={index}>
                                                 <CardHerb title={data.title}
                                                           body={data.description}
                                                           image={data.path}
-                                                          herbRouteById={herbRouteById}
+                                                          herbRouteById
                                                           id={data.herbID}/>
                                             </Col>
                                         )
@@ -85,7 +85,7 @@ class drugs extends Component {
                         }
                     </Row>
                     <section className="d-flex justify-content-center">
-                        <Pagination number={this.props.herbStore.numberOfHerb} herbsPageRoute={herbsPageRoute} current={this.props.match.params.page}/>
+                        <Pagination number={this.props.drugStore.number} herbsPageRoute={drugsPageRoute} current={this.props.match.params.page}/>
                     </section>
                 </Container>
             </div>
@@ -93,9 +93,9 @@ class drugs extends Component {
     }
 }
 
-const mapStateToProps = ({lang, herbStore}) => {
+const mapStateToProps = ({lang, drugStore}) => {
     return {
-        lang, herbStore
+        lang, drugStore
     }
 };
 
