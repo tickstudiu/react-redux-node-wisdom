@@ -23,6 +23,10 @@ class App extends Component {
         this.props.history.push(`/herb/${id}`);
     };
 
+    herbsRoute = () => {
+        this.props.history.push("/herbs");
+    };
+
     componentWillMount() {
         this.props.getHerbs(async () => {
             this.setState({loading: false});
@@ -30,7 +34,7 @@ class App extends Component {
     }
 
     render() {
-        const {herbRouteById} = this;
+        const {herbRouteById, herbsRoute} = this;
         const staticText = tools.checkLanguage(AppText);
 
         if(this.state.loading){
@@ -39,7 +43,7 @@ class App extends Component {
 
         return (
             <div>
-                <JumbotronHeader/>
+                <JumbotronHeader herbsRoute={herbsRoute}/>
                 <Container>
                     <CardColum/>
                     <JumbotronTwoSection/>
