@@ -49,3 +49,13 @@ export const FETCH_DRUG_ERROR = 'fetch_drug_error';
 export const CREATE_DRUG_ERROR = 'create_drug_error';
 export const UPDATE_DRUG_ERROR = 'update_drug_error';
 export const DELETE_DRUG_ERROR = 'delete_drug_error';
+
+export const FETCH_ACTIVITY = 'fetch_activity';
+export const FETCH_ACTIVITY_BY_ID = 'fetch_activity_by_id';
+export const CREATE_ACTIVITY = 'create_activity';
+export const UPDATE_ACTIVITY = 'update_activity';
+export const DELETE_ACTIVITY = 'delete_activity';
+export const FETCH_ACTIVITY_ERROR = 'fetch_activity_error';
+export const CREATE_ACTIVITY_ERROR = 'create_activity_error';
+export const UPDATE_ACTIVITY_ERROR = 'update_activity_error';
+export const DELETE_ACTIVITY_ERROR = 'delete_activity_error';
