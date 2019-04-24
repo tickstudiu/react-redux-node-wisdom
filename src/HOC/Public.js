@@ -33,12 +33,20 @@ export const Public = ComposedComponent => {
             this.props.history.push("/aboutUs");
         };
 
+        activitiesRoute = () => {
+            this.props.history.push("/activities");
+        };
+
+        drugsRoute = () => {
+            this.props.history.push("/drugs");
+        };
+
         render() {
             const lang = tools.getLanguage();
-            const {handleChangeLang, homeRoute, herbsRoute, aboutUsRoute} = this;
+            const {handleChangeLang, homeRoute, herbsRoute, aboutUsRoute, activitiesRoute, drugsRoute} = this;
             return (
                 <Fragment>
-                    <Navbar handleChangeLang={handleChangeLang} lang={lang} path={this.props.match.path}
+                    <Navbar handleChangeLang={handleChangeLang} lang={lang} path={this.props.match.path} activitiesRoute={activitiesRoute} drugsRoute={drugsRoute}
                             homeRoute={homeRoute} herbsRoute={herbsRoute} aboutUsRoute={aboutUsRoute}/>
                     <ComposedComponent {...this.props} />
                     <ToastContainer/>

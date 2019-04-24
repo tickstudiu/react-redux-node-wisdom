@@ -29,7 +29,7 @@ export default class Example extends React.Component {
     }
 
     render() {
-        const {path, homeRoute, herbsRoute, aboutUsRoute, handleChangeLang, lang} = this.props;
+        const {path, homeRoute, herbsRoute, aboutUsRoute, drugsRoute, activitiesRoute, handleChangeLang, lang} = this.props;
         const staticText = tools.checkLanguage(NavbarText);
         return (
             <Navbar light expand="md">
@@ -45,10 +45,10 @@ export default class Example extends React.Component {
                                 <NavLink href="" className={path === "/herbs" ? 'active' : ''} onClick={herbsRoute}>{staticText.herb}</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="" className={path === "/drugs" ? 'active' : ''} onClick={herbsRoute}>{staticText.drug}</NavLink>
+                                <NavLink href="" className={path === "/drugs" ? 'active' : ''} onClick={drugsRoute}>{staticText.drug}</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="" className={path === "/activities" ? 'active' : ''} onClick={herbsRoute}>{staticText.activity}</NavLink>
+                                <NavLink href="" className={path === "/activities" ? 'active' : ''} onClick={activitiesRoute}>{staticText.activity}</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="" className={path === "/aboutUs" ? 'active' : ''} onClick={aboutUsRoute}>{staticText.aboutUs}</NavLink>
