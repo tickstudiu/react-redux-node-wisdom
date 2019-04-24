@@ -11,7 +11,7 @@ const rootReducers = combineReducers({
     herbStore: herbReducer,
     imageStore: imageReducer,
     benefitStore: benefitReducer,
-    drugStroe: drugReducer
+    drugStore: drugReducer
 });
 
 export default  rootReducers;

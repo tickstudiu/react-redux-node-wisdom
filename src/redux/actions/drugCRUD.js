@@ -64,6 +64,23 @@ export const postDrug = (callback, data) => async dispatch => {
     }
 };
 
+export const postMutiImageDrug = (callback, data) => async dispatch => {
+    const res = await tools.postImageApi(`${RootUrl}/multipleDrugImage`, data);
+    if (res.success) {
+        await dispatch({
+            type: CREATE_DRUG,
+            payload: res.data.result,
+        });
+        await callback();
+    } else {
+        console.log(res.error.data);
+        await dispatch({
+            type: CREATE_DRUG_ERROR,
+            payload: res.error.data.messages,
+        });
+    }
+};
+
 export const putDrug = (callback, id, data) => async dispatch => {
     const res = await tools.putApi(`${RootUrl}/drug/${id}`, data);
     if (res.success) {

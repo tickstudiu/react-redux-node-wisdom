@@ -48,6 +48,7 @@ class index extends Component {
 
     handleSubmit = () => {
         this.setState({createLoading: true});
+        const {shareholders} = this.state;
         const formData = new FormData();
         formData.append('drugImage', this.state.image);
         formData.append('path', this.state.path);
@@ -55,8 +56,23 @@ class index extends Component {
         formData.append('description', this.state.description);
 
         this.props.postDrug(async () => {
-            await this.setState({createLoading: false});
-        }, formData)
+            shareholders.map(ingredient => {
+                let dataIngredients = {
+                    ingredient: ingredient.ingredient,
+                    drugID: this.props.drugStore.lastDrugID,
+                };
+                this.props.postIngredient(async () => {
+                    await this.setState({createLoading: false});
+                }, dataIngredients);
+            });
+
+            // const formData2 = new FormData();
+            // formData.append('drugImage', this.state.gallery[0]);
+            // formData.append('drugID', this.props.drugStore.lastDrugID);
+            // this.props.postMutiImageDrug(async ()=>{
+            //     await this.setState({createLoading: false});
+            // }, formData2)
+        }, formData);
     };
 
     handleOnDrop = (picture) => {
@@ -160,9 +176,9 @@ class index extends Component {
     }
 }
 
-const mapStateToProps = ({lang, herbStore}) => {
+const mapStateToProps = ({lang, drugStore}) => {
     return {
-        lang, herbStore
+        lang, drugStore
     }
 };
 

@@ -30,6 +30,16 @@ export const CREATE_BENEFIT_ERROR = 'create_benefit_error';
 export const UPDATE_BENEFIT_BY_ID_ERROR = 'update_benefit_by_id_error';
 export const DELETE_BENEFIT_BY_ID_ERROR = 'delete_benefit_by_id_error';
 
+export const FETCH_INGREDIENT = 'fetch_ingredient';
+export const FETCH_INGREDIENT_BY_ID = 'fetch_ingredient_by_id';
+export const CREATE_INGREDIENT = 'create_ingredient_user';
+export const UPDATE_INGREDIENT_BY_ID = 'update_ingredient_by_id';
+export const DELETE_INGREDIENT_BY_ID = 'delete_ingredient_by_id';
+export const FETCH_INGREDIENT_ERROR = 'fetch_ingredient_error';
+export const CREATE_INGREDIENT_ERROR = 'create_ingredient_error';
+export const UPDATE_INGREDIENT_BY_ID_ERROR = 'update_ingredient_by_id_error';
+export const DELETE_INGREDIENT_BY_ID_ERROR = 'delete_ingredient_by_id_error';
+
 export const FETCH_DRUG = 'fetch_drug';
 export const FETCH_DRUG_BY_ID = 'fetch_drug_by_id';
 export const CREATE_DRUG = 'create_drug';

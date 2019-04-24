@@ -4,6 +4,7 @@ export * from './herbCRUD';
 export * from './imageCRUD';
 export * from './benefitCRUD';
 export * from './drugCRUD';
+export * from './ingredientCRUD';
 
 export const changeLanguage = lang => dispatch => {
     dispatch({

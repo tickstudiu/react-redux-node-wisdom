@@ -31,7 +31,7 @@ export default (state = initialState,action) => {
             tools.successNotify('created!!');
             return {
                 ...state,
-                lastDrugID: action.lastHerbID,
+                lastDrugID: action.lastDrugID,
                 allDrug: action.payload,
             };
         case CREATE_DRUG_ERROR:
