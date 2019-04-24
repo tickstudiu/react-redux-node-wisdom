@@ -4,7 +4,7 @@ import * as tools from '../../utils';
 import * as action from '../../redux/actions';
 import {DrugsText} from './drugs.text';
 import {Container, Row, Col} from 'reactstrap';
-import {CardHeader, FormSearch, CardHerb, Loader, Pagination} from '../../components';
+import {CardHeader, FormSearch, CardDrug, Loader, Pagination} from '../../components';
 
 class drugs extends Component {
 
@@ -22,8 +22,8 @@ class drugs extends Component {
         });
     };
 
-    herbRouteById = (id) => {
-        this.props.history.push(`/herb/${id}`);
+    drugRouteById = (id) => {
+        this.props.history.push(`/drug/${id}`);
     };
 
     drugsPageRoute = (page) => {
@@ -37,7 +37,7 @@ class drugs extends Component {
     }
 
     render() {
-        const {handleChange, herbRouteById, drugsPageRoute} = this;
+        const {handleChange, drugRouteById, drugsPageRoute} = this;
         const staticText = tools.checkLanguage(DrugsText);
 
         if(this.state.loading){
@@ -57,11 +57,11 @@ class drugs extends Component {
                                         if (data.title.match(this.state.search)){
                                             return (
                                                 <Col lg={3} md={4} sm={12} key={index}>
-                                                    <CardHerb title={data.title}
+                                                    <CardDrug title={data.title}
                                                               body={data.description}
                                                               image={data.path}
-                                                              herbRouteById
-                                                              id={data.herbID}/>
+                                                              drugRouteById={drugRouteById}
+                                                              id={data.drugID}/>
                                                 </Col>
                                             )
                                         }
@@ -70,11 +70,11 @@ class drugs extends Component {
                                     this.props.drugStore.allDrug.slice(tools.limitUpperPage(this.props.match.params.page), tools.limitLowerPage(this.props.match.params.page)).map((data, index) => {
                                         return (
                                             <Col lg={3} md={4} sm={12} key={index}>
-                                                <CardHerb title={data.title}
+                                                <CardDrug title={data.title}
                                                           body={data.description}
                                                           image={data.path}
-                                                          herbRouteById
-                                                          id={data.herbID}/>
+                                                          drugRouteById={drugRouteById}
+                                                          id={data.drugID}/>
                                             </Col>
                                         )
                                     })
