@@ -1,8 +1,11 @@
 import App from '../pages/App';
 import Herbs from '../pages/Herbs';
 import Herb from '../pages/Herb'
+
 import AboutUs from '../pages/AboutUs';
+
 import NotPage from '../pages/404';
+
 import CreateHerb from '../pages/Create/herb';
 import CreateActivity from '../pages/Create/activity';
 import CreateDrug from '../pages/Create/drug';
@@ -31,14 +34,44 @@ const indexRoutes = [
         component: Public(Herbs),
     },
     {
-        name: 'about',
-        path: '/aboutUs',
-        component: Public(AboutUs),
-    },
-    {
         name: 'herb',
         path: '/herb/:id',
         component: Public(Herb),
+    },
+    {
+        name: 'drugs',
+        path: '/drugs',
+        component: Public(Herbs),
+    },
+    {
+        name: 'drugs',
+        path: '/drugs/page/:page',
+        component: Public(Herbs),
+    },
+    {
+        name: 'drug',
+        path: '/drug/:id',
+        component: Public(Herb),
+    },
+    {
+        name: 'activities',
+        path: '/activities',
+        component: Public(Herbs),
+    },
+    {
+        name: 'activities',
+        path: '/activities/page/:page',
+        component: Public(Herbs),
+    },
+    {
+        name: 'activity',
+        path: '/activity/:id',
+        component: Public(Herb),
+    },
+    {
+        name: 'about',
+        path: '/aboutUs',
+        component: Public(AboutUs),
     },
     {
         name: 'create herb',

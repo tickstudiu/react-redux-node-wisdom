@@ -45,6 +45,12 @@ export default class Example extends React.Component {
                                 <NavLink href="" className={path === "/herbs" ? 'active' : ''} onClick={herbsRoute}>{staticText.herb}</NavLink>
                             </NavItem>
                             <NavItem>
+                                <NavLink href="" className={path === "/drugs" ? 'active' : ''} onClick={herbsRoute}>{staticText.drug}</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="" className={path === "/activities" ? 'active' : ''} onClick={herbsRoute}>{staticText.activity}</NavLink>
+                            </NavItem>
+                            <NavItem>
                                 <NavLink href="" className={path === "/aboutUs" ? 'active' : ''} onClick={aboutUsRoute}>{staticText.aboutUs}</NavLink>
                             </NavItem>
                             <NavItem>

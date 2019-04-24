@@ -88,8 +88,14 @@ class index extends Component {
                             <FormHeaderHerb fileSelectHandler={fileSelectHandler}
                                             image={image}
                                             imagePreviewUrl={imagePreviewUrl}/>
+                        </Col>
+                        <Col lg={8} md={12}>
                             <h5 className="text-capitalize my-2">{staticText.title}<span className="text-danger">*</span></h5>
                             <Input type="text" name="title" placeholder={staticText.placeholderTitle} onChange={handleChange}/>
+                        </Col>
+                        <Col lg={4} md={12}>
+                            <h5 className="text-capitalize my-2">{staticText.date}<span className="text-danger">*</span></h5>
+                            <Input type="date" name="title" onChange={handleChange}/>
                         </Col>
                         <Col lg={12} md={12}>
                             <h5 className="text-capitalize">{staticText.description}<span className="text-danger">*</span></h5>

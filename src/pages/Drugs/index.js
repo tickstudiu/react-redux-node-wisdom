@@ -2,11 +2,11 @@ import React, {Component} from "react";
 import {connect} from 'react-redux';
 import * as tools from '../../utils';
 import * as action from '../../redux/actions';
-import {HerbsText} from './herbs.text';
+import {DrugsText} from './drugs.text';
 import {Container, Row, Col} from 'reactstrap';
 import {CardHeader, FormSearch, CardHerb, Loader, Pagination} from '../../components';
 
-class herbs extends Component {
+class drugs extends Component {
 
     state = {
         loading: true,
@@ -38,7 +38,7 @@ class herbs extends Component {
 
     render() {
         const {handleChange, herbRouteById, herbsPageRoute} = this;
-        const staticText = tools.checkLanguage(HerbsText);
+        const staticText = tools.checkLanguage(DrugsText);
 
         if(this.state.loading){
             return <Loader/>
@@ -99,4 +99,4 @@ const mapStateToProps = ({lang, herbStore}) => {
     }
 };
 
-export default connect(mapStateToProps, action)(herbs);
+export default connect(mapStateToProps, action)(drugs);

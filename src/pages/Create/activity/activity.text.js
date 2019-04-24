@@ -1,19 +1,19 @@
 export const ActivityText = {
     th: {
         title: 'หัวข้อ',
-        placeholderTitle: 'ชื่อสมุนไพร',
+        date: 'วันที่จัดกิจกรรม',
+        placeholderTitle: 'ชื่อกิจกรรม',
         description: 'คำอธิบาย',
-        placeholderDescription: 'คำอธิบายของสมุนไพร',
-        placeholderBenefit: 'คำอธิบายของคุณสมบัติ หรือ ประโยชน์',
+        placeholderDescription: 'คำอธิบายของกิจกรรม',
         btn: 'สร้าง',
         createLoading: 'กำลังสร้าง...',
     },
     en: {
         title: 'Title',
-        placeholderTitle: 'Herb name',
+        date: 'date',
+        placeholderTitle: 'Activity name',
         description: 'Description',
-        placeholderDescription: 'Description of herbs',
-        placeholderBenefit: 'Description of properties or benefits',
+        placeholderDescription: 'Description of activity',
         btn: 'Create',
         createLoading: 'loading...',
     }
