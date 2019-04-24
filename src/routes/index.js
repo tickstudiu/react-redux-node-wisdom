@@ -3,7 +3,9 @@ import Herbs from '../pages/Herbs';
 import Herb from '../pages/Herb'
 import AboutUs from '../pages/AboutUs';
 import NotPage from '../pages/404';
-import Create from '../pages/Create';
+import CreateHerb from '../pages/Create/herb';
+import CreateActivity from '../pages/Create/activity';
+import CreateDrug from '../pages/Create/drug';
 
 import {Public} from '../HOC';
 
@@ -39,9 +41,19 @@ const indexRoutes = [
         component: Public(Herb),
     },
     {
-        name: 'herb',
-        path: '/create',
-        component: Public(Create),
+        name: 'create herb',
+        path: '/create/herb',
+        component: Public(CreateHerb),
+    },
+    {
+        name: 'create herb',
+        path: '/create/drug',
+        component: Public(CreateDrug),
+    },
+    {
+        name: 'create herb',
+        path: '/create/activity',
+        component: Public(CreateActivity),
     },
     {
         name: '404',

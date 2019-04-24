@@ -1,4 +1,4 @@
-export const CreateText = {
+export const HerbText = {
     th: {
         title: 'หัวข้อ',
         placeholderTitle: 'ชื่อสมุนไพร',
