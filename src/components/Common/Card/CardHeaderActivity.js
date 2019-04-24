@@ -1,12 +1,12 @@
 import React from 'react';
 import {Card, CardImg, CardImgOverlay} from 'reactstrap';
 import CardHeaderImg from '../../../assets/image/cardHeader.jpg';
-import {CardHeaderHerbText} from './text/CardHeaderHerb.text';
+import {CardHeaderActivityText} from './text/CardHeaderActivity.text';
 import * as tools from "../../../utils";
 
-export default class CardHeaderHerb extends React.Component {
+export default class CardHeaderActivity extends React.Component {
     render() {
-        const staticText = tools.checkLanguage(CardHeaderHerbText);
+        const staticText = tools.checkLanguage(CardHeaderActivityText);
         return (
             <Card inverse className="border-0 rounded-0 d-none d-md-block">
                 <CardImg width="100%"

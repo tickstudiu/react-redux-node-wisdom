@@ -4,7 +4,7 @@ import * as tools from '../../utils';
 import * as action from '../../redux/actions';
 import {ActivitiesText} from './activities.text';
 import {Container, Row, Col} from 'reactstrap';
-import {CardHeader, FormSearch, CardActivities, Loader, Pagination} from '../../components';
+import {CardHeaderActivity, FormSearch, CardActivities, Loader, Pagination} from '../../components';
 
 class activities extends Component {
 
@@ -46,7 +46,7 @@ class activities extends Component {
 
         return (
             <div>
-                <CardHeader/>
+                <CardHeaderActivity/>
                 <Container>
                     <FormSearch handleChange={handleChange}/>
                     <Row>

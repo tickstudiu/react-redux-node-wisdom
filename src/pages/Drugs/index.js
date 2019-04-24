@@ -4,7 +4,7 @@ import * as tools from '../../utils';
 import * as action from '../../redux/actions';
 import {DrugsText} from './drugs.text';
 import {Container, Row, Col} from 'reactstrap';
-import {CardHeader, FormSearch, CardDrug, Loader, Pagination} from '../../components';
+import {CardHeaderDrug, FormSearch, CardDrug, Loader, Pagination} from '../../components';
 
 class drugs extends Component {
 
@@ -46,7 +46,7 @@ class drugs extends Component {
 
         return (
             <div>
-                <CardHeader/>
+                <CardHeaderDrug/>
                 <Container>
                     <FormSearch handleChange={handleChange}/>
                     <Row>
