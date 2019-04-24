@@ -1,2 +1,2 @@
-export const RootUrl = 'http://172.26.117.11:5000';
+export const RootUrl = 'http://localhost:5000';
 export const MaxItemPerPage = 16;
