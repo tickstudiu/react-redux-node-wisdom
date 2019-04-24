@@ -12,14 +12,14 @@ import {
 
 import * as tools from '../../utils/';
 
-const initalState = {
+const initialState = {
     lastHerbID: 0,
     allHerb: [],
     herb: {},
     numberOfHerb: 0,
 };
 
-export default (state = initalState,action) => {
+export default (state = initialState,action) => {
     switch (action.type){
         case FETCH_HERB:
             return {

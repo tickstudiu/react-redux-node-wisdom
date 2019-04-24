@@ -136,7 +136,7 @@ class index extends Component {
                                 {staticText.formText}
                             </FormText>
                             {this.state.shareholders.map((shareholder, idx) => (
-                                <article className="mb-3" key={idx}>
+                                <article className="mb-2" key={idx}>
                                     <Input type="text" name="ingredient" onChange={handleShareholderIngredientChange(idx)} placeholder={'#'+ (idx + 1) + ' ' + staticText.list}/>
                                 </article>
                             ))}

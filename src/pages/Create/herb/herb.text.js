@@ -7,7 +7,10 @@ export const HerbText = {
         benefit: 'สรรพคุณ',
         placeholderBenefit: 'คำอธิบายของคุณสมบัติ หรือ ประโยชน์',
         btn: 'สร้าง',
+        formText: '',
         createLoading: 'กำลังสร้าง...',
+        add: 'เพิ่ม',
+        remove: 'ลบ',
     },
     en: {
         title: 'Title',
@@ -17,6 +20,9 @@ export const HerbText = {
         benefit: 'Properties',
         placeholderBenefit: 'Description of properties or benefits',
         btn: 'Create',
+        formText: '',
         createLoading: 'loading...',
+        add: 'Add',
+        remove: 'Remove',
     }
 };

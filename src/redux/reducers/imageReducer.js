@@ -7,12 +7,12 @@ import {
 } from '../types';
 import * as tools from '../../utils/';
 
-const initalState = {
+const initialState = {
     images: [],
     image: {},
 };
 
-export default (state = initalState, action) => {
+export default (state = initialState, action) => {
     switch (action.type) {
         case FETCH_IMAGE:
             return {

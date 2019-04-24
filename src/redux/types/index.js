@@ -19,3 +19,13 @@ export const FETCH_IMAGE_ERROR = 'fetch_image_error';
 export const CREATE_IMAGE_ERROR = 'create_image_error';
 export const UPDATE_IMAGE_BY_ID_ERROR = 'update_image_by_id_error';
 export const DELETE_IMAGE_BY_ID_ERROR = 'delete_image_by_id_error';
+
+export const FETCH_BENEFIT = 'fetch_benefit';
+export const FETCH_BENEFIT_BY_ID = 'fetch_benefit_by_id';
+export const CREATE_BENEFIT = 'create_benefit_user';
+export const UPDATE_BENEFIT_BY_ID = 'update_benefit_by_id';
+export const DELETE_BENEFIT_BY_ID = 'delete_benefit_by_id';
+export const FETCH_BENEFIT_ERROR = 'fetch_benefit_error';
+export const CREATE_BENEFIT_ERROR = 'create_benefit_error';
+export const UPDATE_BENEFIT_BY_ID_ERROR = 'update_benefit_by_id_error';
+export const DELETE_BENEFIT_BY_ID_ERROR = 'delete_benefit_by_id_error';

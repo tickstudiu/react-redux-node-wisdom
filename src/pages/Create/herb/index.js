@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import * as tools from '../../../utils/index';
 import * as action from '../../../redux/actions/index';
 import {HerbText} from './herb.text';
-import {Container, Input, Row, Col, Button} from 'reactstrap';
+import {Container, Input, Row, Col, Button, FormText} from 'reactstrap';
 import {Loader, FormHeaderHerb, JumbotronDescriptionCreate} from '../../../components/index';
 import ImageUploader from 'react-images-upload';
 
@@ -15,10 +15,10 @@ class create extends Component {
         search: '',
         image: null,
         gallery: [],
+        shareholders: [{title: "", description: "",}],
         imagePreviewUrl: '',
         title: '',
         description: '',
-        benefit: ''
     };
 
     fileSelectHandler = event => {
@@ -33,6 +33,36 @@ class create extends Component {
         };
 
         reader.readAsDataURL(file);
+    };
+
+    handleShareholderTitleChange = idx => evt => {
+        const newShareholders = this.state.shareholders.map((shareholder, sidx) => {
+            if (idx !== sidx) return shareholder;
+            return {...shareholder, title: evt.target.value};
+        });
+
+        this.setState({shareholders: newShareholders});
+    };
+
+    handleShareholderDescriptionChange = idx => evt => {
+        const newShareholders = this.state.shareholders.map((shareholder, sidx) => {
+            if (idx !== sidx) return shareholder;
+            return {...shareholder, description: evt.target.value};
+        });
+
+        this.setState({shareholders: newShareholders});
+    };
+
+    handleAddShareholder = () => {
+        this.setState({
+            shareholders: this.state.shareholders.concat([{title: "", description: "",}])
+        });
+    };
+
+    handleRemoveShareholder = idx => () => {
+        this.setState({
+            shareholders: this.state.shareholders.filter((s, sidx) => idx !== sidx)
+        });
     };
 
     handleChange = (event) => {
@@ -52,18 +82,28 @@ class create extends Component {
 
     handleSubmit = () => {
         this.setState({createLoading: true});
+        const {shareholders} = this.state;
         let data = {
             title: this.state.title,
             description: this.state.description,
-            benefit: this.state.benefit,
         };
         this.props.postHerb(async () => {
+            shareholders.map(benefit => {
+                let dataBenefits = {
+                    title: benefit.title,
+                    description: benefit.description,
+                    herbID: this.props.herbStore.lastHerbID,
+                };
+                this.props.postBenefit(async () => {
+                }, dataBenefits);
+            });
+
             const formData = new FormData();
             formData.append('herbImage', this.state.image);
             formData.append('herbID', this.props.herbStore.lastHerbID);
             this.props.postImage(async () => {
                 await this.setState({createLoading: false});
-            }, formData)
+            }, formData);
         }, data)
     };
 
@@ -75,7 +115,7 @@ class create extends Component {
 
     render() {
         const {image, imagePreviewUrl} = this.state;
-        const {fileSelectHandler, handleChange, handleSubmit, handleOnDrop} = this;
+        const {fileSelectHandler, handleChange, handleSubmit, handleOnDrop, handleAddShareholder, handleRemoveShareholder, handleShareholderDescriptionChange, handleShareholderTitleChange} = this;
         const staticText = tools.checkLanguage(HerbText);
         if(this.state.loading){
             return <Loader/>
@@ -95,8 +135,30 @@ class create extends Component {
                         <Col lg={6} md={12}>
                             <h5 className="text-capitalize my-2">{staticText.description}<span className="text-danger">*</span></h5>
                             <Input type="textarea" name="description" placeholder={staticText.placeholderDescription} onChange={handleChange}/>
-                            <h5 className="text-capitalize my-2">{staticText.benefit}<span className="text-danger">*</span></h5>
-                            <Input type="textarea" name="benefit" placeholder={staticText.placeholderBenefit} onChange={handleChange}/>
+                            <h5 className="text-capitalize d-flex justify-content-between align-items-center my-2">
+                                <div>
+                                    {staticText.benefit}<span className="text-danger">*</span>
+                                </div>
+                                <div>
+                                    <Button color="primary" size="sm" outline className="mr-2"
+                                            onClick={handleAddShareholder}>
+                                        {staticText.add}
+                                    </Button>
+                                    <Button onClick={handleRemoveShareholder(this.state.shareholders.length - 1)}
+                                            size="sm" color="danger" outline>
+                                        {staticText.remove}
+                                    </Button>
+                                </div>
+                            </h5>
+                            <FormText color="muted mb-2">
+                                {staticText.formText}
+                            </FormText>
+                            {this.state.shareholders.map((shareholder, idx) => (
+                                <article className="mb-2" key={idx}>
+                                    <Input type="text" className="mb-2" onChange={handleShareholderTitleChange(idx)} placeholder={'#'+ (idx + 1)}/>
+                                    <Input type="text" onChange={handleShareholderDescriptionChange(idx)} placeholder={staticText.placeholderBenefit}/>
+                                </article>
+                            ))}
                         </Col>
                         <Col lg={6} md={12}>
                             <ImageUploader
