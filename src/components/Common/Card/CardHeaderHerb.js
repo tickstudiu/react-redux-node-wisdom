@@ -4,7 +4,7 @@ import emptyImage from '../../../assets/image/image600x400.png'
 
 export default class CardHeaderHerb extends React.Component{
     render(){
-        const {image, title} = this.props;
+        const {image, title, date} = this.props;
         return (
             <div>
                 <Card inverse className="border-0 rounded-0">
@@ -14,7 +14,7 @@ export default class CardHeaderHerb extends React.Component{
                             <div>
                                 <CardTitle className="text-white text-capitalize">{title}</CardTitle>
                                 <CardText>
-                                    <small className="text-muted">Last updated 3 mins ago</small>
+                                    <small className="text-muted">{date}</small>
                                 </CardText>
                             </div>
                         </section>

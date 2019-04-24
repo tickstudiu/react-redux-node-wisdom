@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3d789fd-7c57-4fce-9232-83daba9019a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/redux/actions/benefitCRUD.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/benefitReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Create/drug/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Create/drug/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Create/herb/herb.text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Create/herb/herb.text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Create/herb/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Create/herb/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/herbReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/herbReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/imageReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/imageReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/types/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/types/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/Card/CardHeaderHerb.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Card/CardHeaderHerb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/Card/CardHerb.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Card/CardHerb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Herb/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Herb/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,7 +35,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="12" />
-          <entry key="js" value="361" />
+          <entry key="js" value="366" />
           <entry key="json" value="1" />
           <entry key="styl" value="2" />
         </counts>
@@ -52,31 +44,31 @@
         <counts>
           <entry key="CSS" value="12" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="361" />
+          <entry key="JavaScript" value="366" />
           <entry key="Stylus" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="347" />
-          <entry key="js" value="11076" />
+          <entry key="js" value="11343" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="347" />
-          <entry key="JavaScript" value="11076" />
+          <entry key="JavaScript" value="11343" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pages/Create/herb/index.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/Herb/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="98" column="15" lean-forward="true" selection-start-line="98" selection-start-column="15" selection-end-line="98" selection-end-column="15" />
+            <state relative-caret-position="247">
+              <caret line="48" column="105" lean-forward="true" selection-start-line="48" selection-start-column="105" selection-end-line="48" selection-end-column="105" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -84,23 +76,44 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/redux/actions/benefitCRUD.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Common/Card/CardHeaderHerb.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+            <state relative-caret-position="138">
+              <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
               <folding>
-                <element signature="e#0#264#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/redux/actions/index.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Common/Card/CardHerb.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/redux/reducers/benefitReducer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="92">
-              <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+              <caret line="11" column="14" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/redux/reducers/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="11" column="16" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,8 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/Common/Card/CardHerb.js" />
-        <option value="$PROJECT_DIR$/src/assets/myStyle.css" />
         <option value="$PROJECT_DIR$/src/components/Common/Form/FormSearch.js" />
         <option value="$PROJECT_DIR$/src/components/Common/Jumbotron/JumbotronWithImage.js" />
         <option value="$PROJECT_DIR$/src/components/Common/Jumbotron/JumbotronHeader.js" />
@@ -134,7 +145,6 @@
         <option value="$PROJECT_DIR$/src/components/Common/Jumbotron/text/JumbotronTwoSection.text.js" />
         <option value="$PROJECT_DIR$/src/components/Common/Jumbotron/JumbotronOnlyText.js" />
         <option value="$PROJECT_DIR$/src/components/Common/Jumbotron/text/JumbotronOnlyText.text.js" />
-        <option value="$PROJECT_DIR$/src/pages/Herb/index.js" />
         <option value="$PROJECT_DIR$/src/components/Common/Card/CardHeader.js" />
         <option value="$PROJECT_DIR$/src/components/Common/Card/text/CardHerb.text.js" />
         <option value="$PROJECT_DIR$/src/components/Common/Jumbotron/text/JumbotronDescriptionCreate.text.js" />
@@ -170,9 +180,12 @@
         <option value="$PROJECT_DIR$/src/redux/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/redux/reducers/imageReducer.js" />
         <option value="$PROJECT_DIR$/src/redux/reducers/herbReducer.js" />
-        <option value="$PROJECT_DIR$/src/redux/actions/benefitCRUD.js" />
         <option value="$PROJECT_DIR$/src/redux/actions/index.js" />
         <option value="$PROJECT_DIR$/src/pages/Create/herb/index.js" />
+        <option value="$PROJECT_DIR$/src/redux/actions/benefitCRUD.js" />
+        <option value="$PROJECT_DIR$/src/components/Common/Card/CardHerb.js" />
+        <option value="$PROJECT_DIR$/src/pages/Herb/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Common/Card/CardHeaderHerb.js" />
       </list>
     </option>
   </component>
@@ -220,49 +233,22 @@
               <item name="react-redux-node-wisdom" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-redux-node-wisdom" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-redux-node-wisdom" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-redux-node-wisdom" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Create" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-redux-node-wisdom" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-redux-node-wisdom" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Create" type="462c0819:PsiDirectoryNode" />
-              <item name="herb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-redux-node-wisdom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-redux-node-wisdom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="redux" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-redux-node-wisdom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-redux-node-wisdom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="redux" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-redux-node-wisdom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-redux-node-wisdom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="redux" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-redux-node-wisdom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-redux-node-wisdom" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="redux" type="462c0819:PsiDirectoryNode" />
-              <item name="types" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Common" type="462c0819:PsiDirectoryNode" />
+              <item name="Card" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -320,12 +306,12 @@
       <workItem from="1551347714202" duration="8292000" />
       <workItem from="1551432012067" duration="594000" />
       <workItem from="1552129958728" duration="313000" />
-      <workItem from="1556113467503" duration="15371000" />
+      <workItem from="1556113467503" duration="16415000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69698000" />
+    <option name="totallyTimeSpent" value="70742000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -378,20 +364,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/Common/Card/CardHerb.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="48" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Common/Jumbotron/JumbotronHeader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="123" selection-start-line="14" selection-start-column="120" selection-end-line="14" selection-end-column="123" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Common/Jumbotron/text/JumbotronOnlyText.text.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -466,13 +438,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="10" column="75" lean-forward="true" selection-start-line="10" selection-start-column="75" selection-end-line="10" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Herb/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="45" column="92" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="92" />
         </state>
       </provider>
     </entry>
@@ -709,30 +674,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="46" lean-forward="true" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/reducers/benefitReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="7" column="43" lean-forward="true" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#154#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/redux/actions/benefitCRUD.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+        <state relative-caret-position="782">
+          <caret line="49" column="55" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
           <folding>
             <element signature="e#0#264#0" expanded="true" />
           </folding>
@@ -748,10 +693,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Create/herb/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="98" column="15" lean-forward="true" selection-start-line="98" selection-start-column="15" selection-end-line="98" selection-end-column="15" />
+        <state relative-caret-position="207">
+          <caret line="96" column="38" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="38" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/benefitReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Card/CardHerb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Herb/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="48" column="105" lean-forward="true" selection-start-line="48" selection-start-column="105" selection-end-line="48" selection-end-column="105" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Common/Card/CardHeaderHerb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

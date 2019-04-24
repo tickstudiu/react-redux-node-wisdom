@@ -8,7 +8,7 @@ export default class CardHerb extends React.Component{
         const {title, body, image, herbRouteById,id} = this.props;
         return (
             <Card className="mb-3 cursor-pointer hover-shadow" onClick={() => herbRouteById(id)}>
-                <CardImg top width="100%" src={image ? `${RootUrl}/${image}`: emptyImage} alt="Card image cap" />
+                <CardImg top width="auto" height="175px" src={image ? `${RootUrl}/${image}`: emptyImage} alt="Card image cap" />
                 <CardBody>
                     <CardTitle className="text-overflow">{title}</CardTitle>
                     <CardText className="text-muted text-overflow">{body}</CardText>

@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import * as tools from '../../utils';
 import * as action from '../../redux/actions';
 import {HerbText} from './herb.text';
-import {Container} from 'reactstrap';
+import {Container, Row, Col} from 'reactstrap';
 import {Loader, CardHeaderHerb} from '../../components';
 import {RootUrl} from "../../config";
 import emptyImage from "../../assets/image/image600x400.png";
@@ -19,6 +19,9 @@ class herb extends Component {
     componentWillMount() {
         this.props.getHerbById(async () => {
         }, this.props.match.params.id);
+
+        this.props.getBenefits(async () => {
+        });
 
         this.props.getImages(async () => {
             await this.props.imageStore.images.map(img => {
@@ -43,7 +46,8 @@ class herb extends Component {
         return (
             <div>
                 <Container>
-                    <CardHeaderHerb image={this.state.path ? `${RootUrl}/${this.state.path}`: emptyImage} title={this.props.herbStore.herb.title}/>
+                    <CardHeaderHerb image={this.state.path ? `${RootUrl}/${this.state.path}`: emptyImage}
+                                    title={this.props.herbStore.herb.title} date={this.props.herbStore.herb.createdAt}/>
                     <p className="text-capitalize mt-2 herb-text">
                         {
                             this.props.herbStore.herb.description ?
@@ -56,8 +60,21 @@ class herb extends Component {
                     <hr/>
                     <p className="herb-text">
                         {
-                            this.props.herbStore.herb.benefit ?
-                                this.props.herbStore.herb.benefit
+                            this.props.benefitStore.allBenefit ?
+                                this.props.benefitStore.allBenefit.map((data, index) => {
+                                    if(data.herbID === this.props.match.params.id*1){
+                                        return (
+                                            <Row key={index}>
+                                                <Col lg={4} md={12}>
+                                                    <h6 className="text-capitalize">{data.title}</h6>
+                                                </Col>
+                                                <Col lg={8} md={12}>
+                                                    <p className="text-capitalize">{data.description}</p>
+                                                </Col>
+                                            </Row>
+                                        )
+                                    }
+                                })
                                 :
                                 staticText.noBenefit
                         }
@@ -68,9 +85,9 @@ class herb extends Component {
     }
 }
 
-const mapStateToProps = ({lang, herbStore, imageStore}) => {
+const mapStateToProps = ({lang, herbStore, imageStore, benefitStore}) => {
     return {
-        lang, herbStore, imageStore
+        lang, herbStore, imageStore, benefitStore
     }
 };
 
