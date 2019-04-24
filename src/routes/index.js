@@ -3,6 +3,8 @@ import Herbs from '../pages/Herbs';
 import Herb from '../pages/Herb';
 import Drugs from '../pages/Drugs';
 import Drug from '../pages/Drug';
+import Activities from '../pages/Activities';
+import Activity from '../pages/Activity';
 import AboutUs from '../pages/AboutUs';
 
 import NotPage from '../pages/404';
@@ -57,17 +59,17 @@ const indexRoutes = [
     {
         name: 'activities',
         path: '/activities',
-        component: Public(Herbs),
+        component: Public(Activities),
     },
     {
         name: 'activities',
         path: '/activities/page/:page',
-        component: Public(Herbs),
+        component: Public(Activities),
     },
     {
         name: 'activity',
         path: '/activity/:id',
-        component: Public(Herb),
+        component: Public(Activity),
     },
     {
         name: 'about',

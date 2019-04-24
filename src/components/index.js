@@ -5,6 +5,7 @@ export { default as CardColum } from './Common/Card/CardColum';
 export { default as CardHeader } from './Common/Card/CardHeader';
 export { default as CardHerb } from './Common/Card/CardHerb';
 export { default as CardDrug } from './Common/Card/CardDrug';
+export { default as CardActivities } from './Common/Card/CardActivities';
 export { default as CardHeaderHerb } from './Common/Card/CardHeaderHerb';
 export { default as Navbar } from './Common/Navbar/Navbar';
 export { default as FormLogin } from './Common/Form/FormLogin';
