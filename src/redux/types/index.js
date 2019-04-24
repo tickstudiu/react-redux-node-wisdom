@@ -29,3 +29,13 @@ export const FETCH_BENEFIT_ERROR = 'fetch_benefit_error';
 export const CREATE_BENEFIT_ERROR = 'create_benefit_error';
 export const UPDATE_BENEFIT_BY_ID_ERROR = 'update_benefit_by_id_error';
 export const DELETE_BENEFIT_BY_ID_ERROR = 'delete_benefit_by_id_error';
+
+export const FETCH_DRUG = 'fetch_drug';
+export const FETCH_DRUG_BY_ID = 'fetch_drug_by_id';
+export const CREATE_DRUG = 'create_drug';
+export const UPDATE_DRUG = 'update_drug';
+export const DELETE_DRUG = 'delete_drug';
+export const FETCH_DRUG_ERROR = 'fetch_drug_error';
+export const CREATE_DRUG_ERROR = 'create_drug_error';
+export const UPDATE_DRUG_ERROR = 'update_drug_error';
+export const DELETE_DRUG_ERROR = 'delete_drug_error';

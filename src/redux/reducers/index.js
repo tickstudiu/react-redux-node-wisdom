@@ -4,12 +4,14 @@ import herbReducer from './herbReducer';
 import languageReducer from './languageReducer';
 import imageReducer from './imageReducer';
 import benefitReducer from './benefitReducer';
+import drugReducer from './drugReducer';
 
 const rootReducers = combineReducers({
     lang: languageReducer,
     herbStore: herbReducer,
     imageStore: imageReducer,
     benefitStore: benefitReducer,
+    drugStroe: drugReducer
 });
 
 export default  rootReducers;

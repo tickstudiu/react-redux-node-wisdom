@@ -1,40 +1,40 @@
 import {
-    FETCH_HERB,
-    FETCH_HERB_BY_ID,
-    CREATE_HERB,
-    CREATE_HERB_ERROR,
+    FETCH_DRUG,
+    FETCH_DRUG_BY_ID,
+    CREATE_DRUG,
+    CREATE_DRUG_ERROR,
 } from '../types';
 
 import * as tools from '../../utils/';
 
 const initialState = {
-    lastHerbID: 0,
-    allHerb: [],
-    herb: {},
-    numberOfHerb: 0,
+    lastDrugID: 0,
+    allDrug: [],
+    drug: {},
+    number: 0,
 };
 
 export default (state = initialState,action) => {
     switch (action.type){
-        case FETCH_HERB:
+        case FETCH_DRUG:
             return {
                 ...state,
-                allHerb: action.payload.reverse(),
-                numberOfHerb: action.payload.length,
+                allDrug: action.payload.reverse(),
+                number: action.payload.length,
             };
-        case FETCH_HERB_BY_ID:
+        case FETCH_DRUG_BY_ID:
             return {
                 ...state,
-                herb: action.payload
+                drug: action.payload
             };
-        case CREATE_HERB:
+        case CREATE_DRUG:
             tools.successNotify('created!!');
             return {
                 ...state,
-                lastHerbID: action.lastHerbID,
-                allHerb: action.payload,
+                lastDrugID: action.lastHerbID,
+                allDrug: action.payload,
             };
-        case CREATE_HERB_ERROR:
+        case CREATE_DRUG_ERROR:
             tools.warningNotify (action.payload);
             return {
                 ...state,

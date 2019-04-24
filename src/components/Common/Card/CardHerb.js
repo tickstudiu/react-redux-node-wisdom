@@ -5,7 +5,7 @@ import {RootUrl} from "../../../config";
 
 export default class CardHerb extends React.Component{
     render(){
-        const {title, body, image, herbRouteById,id} = this.props;
+        const {title, body, image, herbRouteById, id} = this.props;
         return (
             <Card className="mb-3 cursor-pointer hover-shadow" onClick={() => herbRouteById(id)}>
                 <CardImg top width="auto" height="175px" src={image ? `${RootUrl}/${image}`: emptyImage} alt="Card image cap" />
