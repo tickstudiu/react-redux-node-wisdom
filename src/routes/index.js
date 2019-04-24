@@ -13,6 +13,10 @@ import CreateHerb from '../pages/Create/herb';
 import CreateActivity from '../pages/Create/activity';
 import CreateDrug from '../pages/Create/drug';
 
+// import DeleteHerb from '../pages/Delete/herb';
+// import DeleteActivity from '../pages/Delete/activity';
+// import DeleteDrug from '../pages/Delete/drug';
+
 import {Public} from '../HOC';
 
 const indexRoutes = [
@@ -82,15 +86,30 @@ const indexRoutes = [
         component: Public(CreateHerb),
     },
     {
-        name: 'create herb',
+        name: 'create drug',
         path: '/create/drug',
         component: Public(CreateDrug),
     },
     {
-        name: 'create herb',
+        name: 'create activity',
         path: '/create/activity',
         component: Public(CreateActivity),
     },
+    // {
+    //     name: 'delete herb',
+    //     path: '/delete/herb',
+    //     component: Public(DeleteHerb),
+    // },
+    // {
+    //     name: 'delete drug',
+    //     path: '/delete/drug',
+    //     component: Public(DeleteDrug),
+    // },
+    // {
+    //     name: 'delete activity',
+    //     path: '/delete/activity',
+    //     component: Public(DeleteActivity),
+    // },
     {
         name: '404',
         path: '*',
