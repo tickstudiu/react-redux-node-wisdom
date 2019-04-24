@@ -18,7 +18,8 @@ class index extends Component {
         imagePreviewUrl: '',
         title: '',
         description: '',
-        benefit: ''
+        benefit: '',
+        path: ''
     };
 
     fileSelectHandler = event => {
@@ -28,6 +29,7 @@ class index extends Component {
         reader.onloadend = () => {
             this.setState({
                 image: file,
+                path: file.name,
                 imagePreviewUrl: reader.result
             });
         };
@@ -46,19 +48,15 @@ class index extends Component {
 
     handleSubmit = () => {
         this.setState({createLoading: true});
-        let data = {
-            title: this.state.title,
-            description: this.state.description,
-            benefit: this.state.benefit,
-        };
-        this.props.postHerb(async () => {
-            const formData = new FormData();
-            formData.append('herbImage', this.state.image);
-            formData.append('herbID', this.props.herbStore.lastHerbID);
-            this.props.postImage(async () => {
-                await this.setState({createLoading: false});
-            }, formData)
-        }, data)
+        const formData = new FormData();
+        formData.append('drugImage', this.state.image);
+        formData.append('path', this.state.path);
+        formData.append('title', this.state.title);
+        formData.append('description', this.state.description);
+
+        this.props.postDrug(async () => {
+            await this.setState({createLoading: false});
+        }, formData)
     };
 
     handleOnDrop = (picture) => {
