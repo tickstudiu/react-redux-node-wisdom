@@ -4,7 +4,7 @@ import * as tools from '../../utils';
 import * as action from '../../redux/actions';
 import {HerbText} from './herb.text';
 import {Container, Row, Col} from 'reactstrap';
-import {Loader, CardHeaderHerb} from '../../components';
+import {Loader, CardHeader} from '../../components';
 import {RootUrl} from "../../config";
 import emptyImage from "../../assets/image/image600x400.png";
 
@@ -46,8 +46,9 @@ class herb extends Component {
         return (
             <div>
                 <Container>
-                    <CardHeaderHerb image={this.state.path ? `${RootUrl}/${this.state.path}`: emptyImage}
-                                    title={this.props.herbStore.herb.title} date={this.props.herbStore.herb.createdAt}/>
+                    <CardHeader image={this.state.path ? `${RootUrl}/${this.state.path}`: emptyImage}
+                                    title={this.props.herbStore.herb.title}
+                                    date={this.props.herbStore.herb.createdAt}/>
                     <p className="text-capitalize mt-2 herb-text">
                         {
                             this.props.herbStore.herb.description ?

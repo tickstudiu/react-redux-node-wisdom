@@ -3,8 +3,8 @@ import {connect} from 'react-redux';
 import * as tools from '../../utils';
 import * as action from '../../redux/actions';
 import {DrugText} from './drug.text';
-import {Container, Row, Col} from 'reactstrap';
-import {Loader, CardHeaderHerb} from '../../components';
+import {Container} from 'reactstrap';
+import {Loader, CardHeader} from '../../components';
 import {RootUrl} from "../../config";
 import emptyImage from "../../assets/image/image600x400.png";
 
@@ -38,7 +38,7 @@ class drug extends Component {
         return (
             <div>
                 <Container>
-                    <CardHeaderHerb image={this.state.path ? `${RootUrl}/${this.state.path}`: emptyImage}
+                    <CardHeader image={this.state.path ? `${RootUrl}/${this.state.path}`: emptyImage}
                                     title={this.props.drugStore.drug.title}
                                     date={this.props.drugStore.drug.createdAt}/>
                     <p className="text-capitalize mt-2 herb-text">
