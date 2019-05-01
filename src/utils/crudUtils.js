@@ -126,7 +126,18 @@ export const putApi = async (url, data) => {
 };
 
 export const deleteApi = async url => {
-    try {} catch (error) {
+    const token = await localStorage.getItem("token");
+    try {
+        const res = await axios.delete(url, {
+            headers: {
+                authentication: token
+            }
+        });
+        return {
+            data: res.data,
+            success: true
+        };
+    } catch (error) {
         return {
             error: error.response,
             success: false

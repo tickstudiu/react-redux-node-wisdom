@@ -2,7 +2,7 @@ import {
     FETCH_DRUG,
     FETCH_DRUG_BY_ID,
     CREATE_DRUG,
-    CREATE_DRUG_ERROR,
+    DELETE_DRUG,
 } from '../types';
 
 import * as tools from '../../utils/';
@@ -34,7 +34,7 @@ export default (state = initialState,action) => {
                 lastDrugID: action.lastDrugID,
                 allDrug: action.payload,
             };
-        case CREATE_DRUG_ERROR:
+        case DELETE_DRUG:
             tools.warningNotify (action.payload);
             return {
                 ...state,

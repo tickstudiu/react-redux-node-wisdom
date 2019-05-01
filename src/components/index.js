@@ -26,3 +26,5 @@ export { default as JumbotronDescriptionCreate } from './Common/Jumbotron/Jumbot
 // export { default as FooterTextOnly } from './Common/Footer/FooterTextOnly';
 export { default as Pagination } from './Common/Pagination/index';
 export { default as Footer } from './Common/Footer/Footer';
+
+export { default as RenderTable } from './Common/Table/RenderTable';

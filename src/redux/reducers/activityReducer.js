@@ -2,7 +2,7 @@ import {
     FETCH_ACTIVITY,
     FETCH_ACTIVITY_BY_ID,
     CREATE_ACTIVITY,
-    CREATE_ACTIVITY_ERROR,
+    DELETE_ACTIVITY,
 } from '../types';
 
 import * as tools from '../../utils/';
@@ -34,7 +34,7 @@ export default (state = initialState,action) => {
                 lastActivityID: action.lastActivityID,
                 allActivity: action.payload,
             };
-        case CREATE_ACTIVITY_ERROR:
+        case DELETE_ACTIVITY:
             tools.warningNotify (action.payload);
             return {
                 ...state,

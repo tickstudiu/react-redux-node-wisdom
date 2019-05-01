@@ -2,7 +2,7 @@ import {
     FETCH_HERB,
     FETCH_HERB_BY_ID,
     CREATE_HERB,
-    CREATE_HERB_ERROR,
+    DELETE_HERB,
 } from '../types';
 
 import * as tools from '../../utils/';
@@ -34,8 +34,8 @@ export default (state = initialState,action) => {
                 lastHerbID: action.lastHerbID,
                 allHerb: action.payload,
             };
-        case CREATE_HERB_ERROR:
-            tools.warningNotify (action.payload);
+        case DELETE_HERB:
+            tools.warningNotify(action.payload);
             return {
                 ...state,
             };
