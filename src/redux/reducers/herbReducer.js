@@ -2,6 +2,7 @@ import {
     FETCH_HERB,
     FETCH_HERB_BY_ID,
     CREATE_HERB,
+    CREATE_HERB_MUTI_IMAGE,
     DELETE_HERB,
 } from '../types';
 
@@ -33,6 +34,10 @@ export default (state = initialState,action) => {
                 ...state,
                 lastHerbID: action.lastHerbID,
                 allHerb: action.payload,
+            };
+        case CREATE_HERB_MUTI_IMAGE:
+            return {
+                state,
             };
         case DELETE_HERB:
             tools.warningNotify(action.payload);
