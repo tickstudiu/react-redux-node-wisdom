@@ -43,8 +43,7 @@ class aboutUs extends Component {
                             </Col>
                             <Col lg={8}>
                                 <p>{staticText.contactUsP1}</p>
-                                <p>Facebook : facebook.com/sliple.ness</p>
-                                <p>Gmail : tickstudiu@gmail.com</p>
+                                <p>Facebook : facebook.com/sliple.ness<br/>Gmail : tickstudiu@gmail.com</p>
                             </Col>
                         </Row>
                     </Jumbotron>
