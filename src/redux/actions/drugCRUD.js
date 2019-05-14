@@ -7,7 +7,9 @@ import {
     UPDATE_DRUG,
     UPDATE_DRUG_ERROR,
     DELETE_DRUG,
-    DELETE_DRUG_ERROR
+    DELETE_DRUG_ERROR,
+    CREATE_DRUG_MUTI_IMAGE,
+    CREATE_DRUG_MUTI_IMAGE_ERROR
 } from '../types';
 import {RootUrl} from '../../config';
 import * as tools from "../../utils";
@@ -68,14 +70,14 @@ export const postMutiImageDrug = (callback, data) => async dispatch => {
     const res = await tools.postImageApi(`${RootUrl}/multipleDrugImage`, data);
     if (res.success) {
         await dispatch({
-            type: CREATE_DRUG,
+            type: CREATE_DRUG_MUTI_IMAGE,
             payload: res.data.result,
         });
         await callback();
     } else {
         console.log(res.error.data);
         await dispatch({
-            type: CREATE_DRUG_ERROR,
+            type: CREATE_DRUG_MUTI_IMAGE_ERROR,
             payload: res.error.data.messages,
         });
     }

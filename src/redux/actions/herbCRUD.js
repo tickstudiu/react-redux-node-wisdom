@@ -7,7 +7,9 @@ import {
     UPDATE_HERB,
     UPDATE_HERB_ERROR,
     DELETE_HERB,
-    DELETE_HERB_ERROR
+    DELETE_HERB_ERROR,
+    CREATE_HERB_MUTI_IMAGE,
+    CREATE_HERB_MUTI_IMAGE_ERROR
 } from '../types';
 import {RootUrl} from '../../config';
 import * as tools from "../../utils";
@@ -59,6 +61,23 @@ export const postHerb = (callback, data) => async dispatch => {
         console.log(res.error.data);
         await dispatch({
             type: CREATE_HERB_ERROR,
+            payload: res.error.data.messages,
+        });
+    }
+};
+
+export const postMutiImageHerb = (callback, data) => async dispatch => {
+    const res = await tools.postImageApi(`${RootUrl}/multipleHerbImage`, data);
+    if (res.success) {
+        await dispatch({
+            type: CREATE_HERB_MUTI_IMAGE,
+            payload: res.data.result,
+        });
+        await callback();
+    } else {
+        console.log(res.error.data);
+        await dispatch({
+            type: CREATE_HERB_MUTI_IMAGE_ERROR,
             payload: res.error.data.messages,
         });
     }
