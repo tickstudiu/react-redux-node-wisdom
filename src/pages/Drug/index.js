@@ -3,8 +3,8 @@ import {connect} from 'react-redux';
 import * as tools from '../../utils';
 import * as action from '../../redux/actions';
 import {DrugText} from './drug.text';
-import {Container} from 'reactstrap';
-import {Loader, CardHeader} from '../../components';
+import {Container, Row, Col} from 'reactstrap';
+import {Loader, CardHeader, ModelImage} from '../../components';
 import {RootUrl} from "../../config";
 import emptyImage from "../../assets/image/image600x400.png";
 
@@ -17,6 +17,9 @@ class drug extends Component {
     };
 
     componentWillMount() {
+        this.props.getImages(async () => {
+        });
+
         this.props.getDrugById(async () => {
             this.setState({
                 path: this.props.drugStore.drug.path
@@ -56,13 +59,27 @@ class drug extends Component {
                             this.props.ingredientStore.allIngredient ?
                                 this.props.ingredientStore.allIngredient.map(data => {
                                     if(data.drugID === this.props.match.params.id*1){
-                                        return data.ingredient
+                                        return <li>{data.ingredient}</li>
                                     }
                                 })
                                 :
                                 staticText.noIngredient
                         }
                     </p>
+                    <h5 className="text-capitalize">{staticText.photo}</h5>
+                    <hr/>
+                    <Row>
+                        {
+                            this.props.imageStore.images ?
+                                this.props.imageStore.images.map((data, index) => {
+                                    if (data.drugID === parseInt(this.props.match.params.id)){
+                                        return <Col lg="4" md="6" sm="12" key={index}><ModelImage image={data.path} alt={data.name}/></Col>
+                                    }
+                                })
+                                :
+                                staticText.noImage
+                        }
+                    </Row>
                 </Container>
             </div>
         );
