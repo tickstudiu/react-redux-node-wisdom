@@ -4,7 +4,7 @@ import * as tools from '../../utils';
 import * as action from '../../redux/actions';
 import {ActivityText} from './activity.text';
 import {Container} from 'reactstrap';
-import {Loader, CardHeader} from '../../components';
+import {Loader, CardHeader, ModelImage} from '../../components';
 import {RootUrl} from "../../config";
 import emptyImage from "../../assets/image/image600x400.png";
 
@@ -17,6 +17,9 @@ class activity extends Component {
     };
 
     componentWillMount() {
+        this.props.getImages(async () => {
+        });
+
         this.props.getActivityById(async () => {
             this.setState({
                 path: this.props.activityStore.activity.path
@@ -46,6 +49,19 @@ class activity extends Component {
                                 staticText.noDescription
                         }
                     </p>
+                    <h5 className="text-capitalize">{staticText.photo} test</h5>
+                    <hr/>
+                    {
+                        this.props.imageStore.images ?
+                            this.props.imageStore.images.map((data, index) => {
+                                if (data.eventID === parseInt(this.props.match.params.id)){
+                                    return <img key={index} src={`${RootUrl}/${data.path}`} alt={data.name}/>
+                                }
+                            })
+                            :
+                            staticText.noDescription
+                    }
+                    <ModelImage/>
                 </Container>
             </div>
         );

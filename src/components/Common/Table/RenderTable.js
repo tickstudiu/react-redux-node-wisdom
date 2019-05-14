@@ -43,7 +43,7 @@ export default class RenderTable extends React.Component {
                 </thead>
                 <tbody>
                 {
-                    this.props.data ?
+                    this.props.data.length > 0 ?
                         this.props.herb ?
                             this.props.data.map((data, index) => {
                                 return (

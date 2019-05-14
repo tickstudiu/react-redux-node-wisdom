@@ -27,6 +27,17 @@
     margin-bottom: -4rem;
 }
 
+.jumbotron-header-about-us{
+    background: url(image/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .jumbotron-header-body{
     font-size: 18px;
     line-height: 2;

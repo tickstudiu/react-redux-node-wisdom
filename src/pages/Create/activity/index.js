@@ -56,13 +56,21 @@ class index extends Component {
         formData.append('date', this.state.date);
         formData.append('description', this.state.description);
         this.props.postActivity(async () => {
-            await this.setState({createLoading: false});
+
+            const formData = new FormData();
+            this.state.gallery.map(image => {
+                formData.append('eventImage', image);
+            });
+            formData.append('eventID', this.props.activityStore.lastActivityID);
+            this.props.postMutiImageActivity(async () => {
+                await this.setState({createLoading: false});
+            }, formData)
         }, formData)
     };
 
     handleOnDrop = (picture) => {
         this.setState({
-            pictures: picture,
+            gallery: picture,
         });
     };
 
@@ -120,9 +128,9 @@ class index extends Component {
     }
 }
 
-const mapStateToProps = ({lang, herbStore}) => {
+const mapStateToProps = ({lang, activityStore}) => {
     return {
-        lang, herbStore
+        lang, activityStore
     }
 };
 
