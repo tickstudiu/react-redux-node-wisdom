@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Card, CardImg } from 'reactstrap';
+import {RootUrl} from '../../../config';
+import emptyImage from '../../../assets/image/image600x400.png'
 
 export default class ModelImage extends Component {
     constructor(props) {
@@ -20,16 +22,13 @@ export default class ModelImage extends Component {
     render() {
         return (
             <div>
-                <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}</Button>
-                <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className} centered>
-                    <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+                <Card className="border-0" style={{overflow: 'hidden', maxHeight: '200px'}} onClick={this.toggle} className="mb-2">
+                    <CardImg width="100%" src={this.props.image ? `${RootUrl}/${this.props.image}`:emptyImage} alt={this.props.alt} />
+                </Card>
+                <Modal isOpen={this.state.modal} toggle={this.toggle} centered>
                     <ModalBody>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <img width="100%" src={this.props.image ? `${RootUrl}/${this.props.image}`:emptyImage} alt={this.props.alt} />
                     </ModalBody>
-                    <ModalFooter>
-                        <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
-                        <Button color="secondary" onClick={this.toggle}>Cancel</Button>
-                    </ModalFooter>
                 </Modal>
             </div>
         );

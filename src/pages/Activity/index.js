@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import * as tools from '../../utils';
 import * as action from '../../redux/actions';
 import {ActivityText} from './activity.text';
-import {Container} from 'reactstrap';
+import {Container, Row, Col} from 'reactstrap';
 import {Loader, CardHeader, ModelImage} from '../../components';
 import {RootUrl} from "../../config";
 import emptyImage from "../../assets/image/image600x400.png";
@@ -49,19 +49,20 @@ class activity extends Component {
                                 staticText.noDescription
                         }
                     </p>
-                    <h5 className="text-capitalize">{staticText.photo} test</h5>
+                    <h5 className="text-capitalize">{staticText.photo}</h5>
                     <hr/>
-                    {
-                        this.props.imageStore.images ?
-                            this.props.imageStore.images.map((data, index) => {
-                                if (data.eventID === parseInt(this.props.match.params.id)){
-                                    return <img key={index} src={`${RootUrl}/${data.path}`} alt={data.name}/>
-                                }
-                            })
-                            :
-                            staticText.noDescription
-                    }
-                    <ModelImage/>
+                    <Row>
+                        {
+                            this.props.imageStore.images ?
+                                this.props.imageStore.images.map((data, index) => {
+                                    if (data.eventID === parseInt(this.props.match.params.id)){
+                                        return <Col lg="4" md="6" sm="12" key={index}><ModelImage image={data.path} alt={data.name}/></Col>
+                                    }
+                                })
+                                :
+                                staticText.noImage
+                        }
+                    </Row>
                 </Container>
             </div>
         );
