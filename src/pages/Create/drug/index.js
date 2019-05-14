@@ -62,16 +62,17 @@ class index extends Component {
                     drugID: this.props.drugStore.lastDrugID,
                 };
                 this.props.postIngredient(async () => {
-                    await this.setState({createLoading: false});
                 }, dataIngredients);
             });
 
-            // const formData2 = new FormData();
-            // formData.append('drugImage', this.state.gallery[0]);
-            // formData.append('drugID', this.props.drugStore.lastDrugID);
-            // this.props.postMutiImageDrug(async ()=>{
-            //     await this.setState({createLoading: false});
-            // }, formData2)
+            const formData2 = new FormData();
+            this.state.gallery.map(image => {
+                formData2.append('drugImage', image);
+            });
+            formData2.append('drugID', this.props.drugStore.lastDrugID);
+            this.props.postMutiImageDrug(async ()=>{
+                await this.setState({createLoading: false});
+            }, formData2)
         }, formData);
     };
 

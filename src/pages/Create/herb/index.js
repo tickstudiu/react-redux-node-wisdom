@@ -132,7 +132,8 @@ class create extends Component {
                             <h5 className="text-capitalize my-2">{staticText.title}<span className="text-danger">*</span></h5>
                             <Input type="text" name="title" placeholder={staticText.placeholderTitle} onChange={handleChange}/>
                         </Col>
-                        <Col lg={6} md={12}>
+                        {/* <Col lg={6} md={12}> */}
+                        <Col lg={12} md={12}>
                             <h5 className="text-capitalize my-2">{staticText.description}<span className="text-danger">*</span></h5>
                             <Input type="textarea" name="description" placeholder={staticText.placeholderDescription} onChange={handleChange}/>
                             <h5 className="text-capitalize d-flex justify-content-between align-items-center my-2">
@@ -160,7 +161,7 @@ class create extends Component {
                                 </article>
                             ))}
                         </Col>
-                        <Col lg={6} md={12}>
+                        {/* <Col lg={6} md={12}>
                             <ImageUploader
                                 withIcon
                                 withPreview
@@ -169,7 +170,7 @@ class create extends Component {
                                 imgExtension={['.jpg', '.gif', '.png']}
                                 maxFileSize={5242880}
                             />
-                        </Col>
+                        </Col> */}
                         <Col lg={12} md={12}>
                             <Button color="primary" className="mt-2" outline onClick={handleSubmit}>{this.state.createLoading ? staticText.createLoading:staticText.btn}</Button>
                         </Col>
