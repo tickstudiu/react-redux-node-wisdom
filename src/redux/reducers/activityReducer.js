@@ -3,6 +3,7 @@ import {
     FETCH_ACTIVITY_BY_ID,
     CREATE_ACTIVITY,
     DELETE_ACTIVITY,
+    CREATE_ACTIVITY_MUTI_IMAGE,
 } from '../types';
 
 import * as tools from '../../utils/';
@@ -33,6 +34,10 @@ export default (state = initialState,action) => {
                 ...state,
                 lastActivityID: action.lastActivityID,
                 allActivity: action.payload,
+            };
+        case CREATE_ACTIVITY_MUTI_IMAGE:
+            return {
+                state,
             };
         case DELETE_ACTIVITY:
             tools.warningNotify (action.payload);

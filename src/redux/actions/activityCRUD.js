@@ -4,6 +4,8 @@ import {
     FETCH_ACTIVITY_ERROR,
     CREATE_ACTIVITY,
     CREATE_ACTIVITY_ERROR,
+    CREATE_ACTIVITY_MUTI_IMAGE,
+    CREATE_ACTIVITY_MUTI_IMAGE_ERROR,
     UPDATE_ACTIVITY,
     UPDATE_ACTIVITY_ERROR,
     DELETE_ACTIVITY,
@@ -68,14 +70,14 @@ export const postMutiImageActivity = (callback, data) => async dispatch => {
     const res = await tools.postImageApi(`${RootUrl}/multipleEventImage`, data);
     if (res.success) {
         await dispatch({
-            type: CREATE_ACTIVITY,
+            type: CREATE_ACTIVITY_MUTI_IMAGE,
             payload: res.data.result,
         });
         await callback();
     } else {
         console.log(res.error.data);
         await dispatch({
-            type: CREATE_ACTIVITY_ERROR,
+            type: CREATE_ACTIVITY_MUTI_IMAGE_ERROR,
             payload: res.error.data.messages,
         });
     }
