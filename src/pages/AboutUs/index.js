@@ -4,7 +4,8 @@ import * as tools from '../../utils';
 import * as action from '../../redux/actions';
 import {AboutUsText} from './abouteUs.text';
 import {Container, Row, Col, Jumbotron} from 'reactstrap';
-import {JumbotronHeaderAboutUs} from '../../components';
+import {JumbotronHeaderAboutUs, ModelImage} from '../../components';
+import profileWanchalerm from '../../assets/image/profile_wanchalerm.jpg';
 
 class aboutUs extends Component {
 
@@ -17,19 +18,12 @@ class aboutUs extends Component {
                     <Jumbotron className="bg-transparent">
                         <Row>
                             <Col lg={4}>
-                                <h1 className="text-capitalize display-4 font-weight-bold">about us</h1>
-                                <small className="text-muted font-weight-bold">test</small>
+                                <h1 className="text-capitalize display-4 font-weight-bold">{staticText.aboutUs}</h1>
+                                <small className="text-muted font-weight-bold">{staticText.aboutUsSub}</small>
                             </Col>
                             <Col lg={8}>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                    pariatur.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    ullamco laboris nisi ut aliquip.</p>
+                                <p>{staticText.aboutUsP1}</p>
+                                <p>{staticText.aboutUsP2}</p>
                             </Col>
                         </Row>
                     </Jumbotron>
@@ -38,25 +32,19 @@ class aboutUs extends Component {
                         <Row>
                             <Col>
                                 <section>
-                                    <h1 className="text-capitalize display-4 font-weight-bold">about us</h1>
-                                    <small className="text-muted font-weight-bold">test</small>
+                                    <h1 className="text-capitalize display-4 font-weight-bold">{staticText.contactUs}</h1>
+                                    <small className="text-muted font-weight-bold">{staticText.contactUsSub}</small>
                                 </section>
                             </Col>
                         </Row>
                         <Row>
                             <Col lg={4}>
-                                test
+                                <ModelImage image={profileWanchalerm} alt="wanchalerm suksawat" profile/>
                             </Col>
                             <Col lg={8}>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                    pariatur.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    ullamco laboris nisi ut aliquip.</p>
+                                <p>{staticText.contactUsP1}</p>
+                                <p>Facebook : facebook.com/sliple.ness</p>
+                                <p>Gmail : tickstudiu@gmail.com</p>
                             </Col>
                         </Row>
                     </Jumbotron>

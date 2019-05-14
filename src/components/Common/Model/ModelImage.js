@@ -20,6 +20,20 @@ export default class ModelImage extends Component {
     }
 
     render() {
+        if(this.props.profile){
+            return (
+                <div>
+                    <Card className="border-0" style={{overflow: 'hidden', maxHeight: '200px'}} onClick={this.toggle} className="mb-2">
+                        <CardImg width="100%" src={this.props.image ? `${this.props.image}`:emptyImage} alt={this.props.alt} />
+                    </Card>
+                    <Modal isOpen={this.state.modal} toggle={this.toggle} centered>
+                        <ModalBody>
+                            <img width="100%" src={this.props.image ? `${this.props.image}`:emptyImage} alt={this.props.alt} />
+                        </ModalBody>
+                    </Modal>
+                </div>
+            );
+        }
         return (
             <div>
                 <Card className="border-0" style={{overflow: 'hidden', maxHeight: '200px'}} onClick={this.toggle} className="mb-2">
